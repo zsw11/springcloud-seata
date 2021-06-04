@@ -42,4 +42,10 @@ public class AccountServiceImpl implements AccountService{
         String mes = orderApi.update(userId, money.multiply(new BigDecimal("0.09")),0);
         LOGGER.info("修改订单状态结束：{}",mes);
     }
+
+    public static void main(String[] args) {
+        BigDecimal decimal = BigDecimal.valueOf(2.00);
+        BigDecimal multiply = decimal.multiply(new BigDecimal("0.09"));
+        System.out.println(multiply);
+    }
 }
